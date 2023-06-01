@@ -1,4 +1,4 @@
-import './globals.scss'
+import '../styles/globals.scss'
 import { apfelRegular, clashDisplayBold, clashDisplayMedium } from '@/utils/font'
 
 export const metadata = {
