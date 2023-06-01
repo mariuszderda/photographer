@@ -1,17 +1,61 @@
 :root {
 
+  // --clr-color-opacity
+  --clr-white: #FDFFFC;
+
+  --clr-navy-blue: #011627;
+  --clr-navy-blue-70: #41505D;
+  --clr-navy-blue-50: #7F8B92;
+
+  --clr-blue: #0B8BD5;
+  --clr-blue-70: #48A8DF;
+  --clr-blue-50: #85C5EA;
+
+  --clr-green: #9BC53D;
+  --clr-green-70: #B4D36E;
+  --clr-green-50: #CDE29E;
+
+  --clr-red: #FF3A20;
+  --clr-red-70: #FF6B58;
+  --clr-red-50: #FF9C8F;
+
+  // media query
+  --media-desktop: 90em; //1440 px
+  --media-tablet: 64em; //64em
+  --media-phone: 320px;
+
+  //font size
+  --fs-700: 5rem;
+  --fs-600: 2.5rem;
+  --fs-500: 3.375rem;
+  --fs-400: 1.5rem;
+  --fs-300: 1.125rem;
+  --fs-200: 1rem;
+
+  //line-height
+  --line-height-800: 5.25rem;
+  --line-height-700: 5rem;
+  --line-height-600: 3.75rem;
+  --line-height-500: 3rem;
+  --line-height-400: 2rem;
+  --line-height-300: 1.5rem;
+
+  //letter-spacing
+  --letter-spacing-2: -2%;
+  --letter-spacing-1: -1.4%;
+
+  // font family
+
+  --ff-serif-bold: var(--clash-bold), serif;
+  --ff-serif-medium: var(--clash-medium), serif;
+  --ff-sans: var(--apfel-regular), sans-serif;
+
 }
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-}
-
-html,
-body {
-  overflow-x: hidden;
-  font-family: var(--apfel-regular), sans-serif;
 }
 
 /* ------------------- */
@@ -46,7 +90,14 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  font-family: var(--ff-sans);
+  font-size: var(--fs-200);
+  color: var(--clr-navy-blue);
+  background-color: var(--clr-white);
+  line-height: var(--line-height-300);
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
