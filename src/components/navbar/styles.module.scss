@@ -1,0 +1,130 @@
+.header {
+  display: flex;
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+
+  @media (min-width: $media-tablet) {
+    padding-inline: clamp(0.5rem, 5vh + 1rem, 8.75rem);
+  }
+  @media (min-width: $media-desktop) {
+    padding-inline: clamp(8.75rem, 5vh + 1rem, 10rem);
+  }
+}
+
+.logo_container {
+  margin-right: 1.25rem;
+}
+
+.mobile_toggle_bar {
+  display: block;
+  @media (min-width: $media-tablet) {
+    display: none;
+  }
+}
+
+.mobile_toggle_bar {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  color: $clr-white;
+
+  .close {
+    transform: translateY(-100%);
+    transition: transform 300ms ease-in;
+  }
+
+  .bars {
+    transform: translateY(-120%);
+    transition: transform 300ms ease-in;
+  }
+
+  .close.active,
+  .bars.active {
+    transform: translateY(0);
+  }
+}
+
+.navigation {
+  color: $clr-white;
+  display: none;
+
+  // mobile navigation sideBar
+  @media (max-width: $media-tablet) {
+    display: block;
+    position: fixed;
+    background: rgba(1, 22, 39);
+    transform: translateY(-100%);
+    transition: transform 300ms ease-in;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+
+    @supports (backdrop-filter: blur(1rem)) {
+      background: rgba(1, 22, 39, 0.01);
+      backdrop-filter: blur(5rem);
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      margin: auto 0;
+      padding: 5rem 0 10rem 0;
+
+      .list-item {
+        margin: 0;
+      }
+    }
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
+  @media (min-width: $media-tablet) {
+    display: block;
+  }
+}
+
+.list {
+}
+
+.list > * + * {
+  margin-left: 2rem;
+}
+
+.list-item {
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.list-item::after {
+  content: '';
+  position: absolute;
+  width: 132%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: -16%;
+  background-color: $clr-white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.list-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

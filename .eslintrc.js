@@ -46,6 +46,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-var-requires': 'off',
+    'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [
       1,
@@ -72,7 +73,14 @@ module.exports = {
         aspects: ['invalidHref', 'preferButton'],
       },
     ],
+    'jsx-a11y/no-redundant-roles': [
+      'error',
+      {
+        ul: ['list'],
+      },
+    ],
     'no-nested-ternary': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 }
