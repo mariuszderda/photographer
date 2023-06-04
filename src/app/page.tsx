@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { TitleHeader } from '@/components/ui/tilteHeader/TitleHeader'
 import styles from '../styles/pages/Home.module.scss'
 
 const Home = () => {
@@ -13,7 +14,9 @@ const Home = () => {
         </h1>
       </section>
       <section>
-        <h2>O mnie</h2>
+        <TitleHeader tag="h2" weight="bold" size="xLarge">
+          O mnie
+        </TitleHeader>
       </section>
     </main>
   )

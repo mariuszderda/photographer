@@ -1,0 +1,39 @@
+.base {
+  display: inline-flex;
+}
+.bold{
+  font-family: $ff-serif-bold;
+}
+
+.normal {
+  font-family: $ff-serif-medium;
+}
+
+.x-small {
+
+}
+
+.small {
+  font-size: $fs-400;
+  line-height: $line-height-400;
+  letter-spacing: $letter-spacing-1;
+}
+
+.medium {
+  font-size: $fs-400;
+  line-height: $line-height-400;
+  letter-spacing: $letter-spacing-2;
+}
+
+.large {
+  font-size: $fs-500;
+  line-height: $line-height-500;
+  letter-spacing: $letter-spacing-2;
+}
+
+.x-large {
+  font-size: $fs-600;
+  line-height: $line-height-600;
+  letter-spacing: $letter-spacing-2;
+}
+
