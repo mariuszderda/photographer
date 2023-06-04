@@ -16,7 +16,9 @@ const Navbar = () => {
 
   return (
     <header
-      className={`${styles.header} ${scrollPosition > 500 ? styles['header-backgroud'] : ''}`}
+      className={`${styles.header} ${
+        scrollPosition > 200 && !isOpen ? styles['header-backgroud'] : ''
+      }`}
     >
       <div className={styles.logo_container}>
         <Image src="/images/logo.svg" alt="logo" width={216} height={64} />
