@@ -35,5 +35,10 @@
   font-size: $fs-600;
   line-height: $line-height-600;
   letter-spacing: $letter-spacing-2;
+
+  @media (max-width: $media-tablet) {
+    font-size: $fs-500;
+    line-height: $line-height-500;
+  }
 }
 
