@@ -18,30 +18,33 @@ $clr-red-70: #FF6B58;
 $clr-red-50: #FF9C8F;
 
 // media query
-$media-desktop: 90em; //1440 px
+$media-desktop: 90em; /* 1440 px */
 
-$media-tablet: 48.125em; //64em
-$media-phone: 320px;
+$media-tablet: 48.125em; /* 770px */
+$media-phone: 20em; /* 320px */
 
 //font size
-$fs-700: 5rem;
-$fs-600: 3.375rem;
-$fs-500: 2.5rem;
-$fs-400: 1.5rem;
-$fs-300: 1.125rem;
-$fs-200: 1rem;
+$fs-700: 5rem; /* 80px */
+$fs-600: 3.375rem; /* 54px */
+$fs-500: 2.5rem; /* 40px */
+$fs-400: 1.5rem; /* 24px */
+$fs-300: 1.25rem; /* 20px*/
+$fs-200: 1.125rem; /* 18px */
+$fs-100: 1rem; /* 16px */
 
 //line-height
-$line-height-800: 5.25rem;
-$line-height-700: 5rem;
-$line-height-600: 3.75rem;
-$line-height-500: 3rem;
-$line-height-400: 2rem;
-$line-height-300: 1.5rem;
+$line-height-800: 5.25rem; /* 84px */
+$line-height-700: 5rem; /* 80px */
+$line-height-600: 3.75rem; /* 54px */
+$line-height-500: 3rem; /* 48px */
+$line-height-400: 2rem; /* 32px */
+$line-height-300: 1.75rem; /* 28px */
+$line-height-200: 1.625rem; /* 26px */
+$line-height-100: 1.5rem; /* 24px */
 
 //letter-spacing
-$letter-spacing-2: 0.02em;
-$letter-spacing-1: -1.4%;
+$letter-spacing-2: -0.02em;
+$letter-spacing-1: -0.014em;
 
 // font family
 

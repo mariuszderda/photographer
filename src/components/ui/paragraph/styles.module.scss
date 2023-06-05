@@ -1,0 +1,30 @@
+.base {
+  display: inline-flex;
+}
+
+.medium {
+  font-size: $fs-200;
+  line-height: $line-height-200;
+}
+
+.small {
+  font-size: $fs-100;
+  line-height: $line-height-100;
+}
+
+.large {
+  font-size: $fs-300;
+  line-height: $line-height-300;
+}
+
+.navy {
+  color: $clr-navy-blue;
+}
+
+.gray {
+  color: $clr-navy-blue-70
+}
+
+.light-gray {
+  color: $clr-navy-blue-50
+}
