@@ -22,11 +22,11 @@ const paragraph = cva(styles.base, {
   },
 })
 
-export interface ParagraphProps
+interface ParagraphProps
   extends React.HTMLAttributes<HTMLParagraphElement>,
     VariantProps<typeof paragraph> {}
 
-export const Paragraph: React.FC<ParagraphProps> = ({
+const Paragraph: React.FC<ParagraphProps> = ({
   className,
   size,
   fontColor,
@@ -37,3 +37,5 @@ export const Paragraph: React.FC<ParagraphProps> = ({
     {children}
   </p>
 )
+
+export default Paragraph

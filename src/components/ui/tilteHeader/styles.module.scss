@@ -10,7 +10,9 @@
 }
 
 .x-small {
-
+  font-size: $fs-300;
+  line-height: $line-height-300;
+  letter-spacing: $letter-spacing-1;
 }
 
 .small {

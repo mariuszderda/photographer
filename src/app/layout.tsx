@@ -1,6 +1,7 @@
 import '../styles/globals.scss'
 import { apfelRegular, clashDisplayBold, clashDisplayMedium } from '@/utils/font'
 import Navbar from '@/components/navbar/Navbar'
+import Footer from '@/components/footer/Footer'
 
 export const metadata = {
   title: 'Monolit Moments',
@@ -16,6 +17,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )

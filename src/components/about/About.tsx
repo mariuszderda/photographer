@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { TitleHeader } from '@/components/ui/tilteHeader/TitleHeader'
-import { Paragraph } from '@/components/ui/paragraph/Paragraph'
 import Image from 'next/image'
+import TitleHeader from '@/components/ui/tilteHeader/TitleHeader'
+import Paragraph from '@/components/ui/paragraph/Paragraph'
 import styles from './styles.module.scss'
 
 const About: FC = () => {

@@ -10,6 +10,7 @@ const titleHeader = cva(styles.base, {
       normal: styles.normal,
     },
     size: {
+      xSmall: styles['x-small'],
       small: styles.small,
       medium: styles.medium,
       large: styles.large,
@@ -22,13 +23,13 @@ const titleHeader = cva(styles.base, {
   },
 })
 
-export interface TitleHeaderProps
+interface TitleHeaderProps
   extends React.HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof titleHeader> {
   tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-export const TitleHeader: React.FC<TitleHeaderProps> = ({
+const TitleHeader: React.FC<TitleHeaderProps> = ({
   tag: Tag,
   className,
   weight,
@@ -40,3 +41,5 @@ export const TitleHeader: React.FC<TitleHeaderProps> = ({
     {children}
   </Tag>
 )
+
+export default TitleHeader
