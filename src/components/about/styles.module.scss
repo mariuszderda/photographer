@@ -1,0 +1,61 @@
+.about {
+  margin: 1.5rem auto;
+  display: flex;
+  position: relative;
+
+  @media (min-width: $media-tablet) {
+    margin: 6.875rem auto;
+  }
+}
+
+.article {
+    min-height: 932px;
+
+}
+
+.paragraph {
+  margin-top: 1.25rem;
+
+  @media (min-width: $media-tablet) {
+    background-color: $clr-navy-blue;
+    padding: 3.75rem 2rem 7.5rem;
+    color: $clr-white;
+    display: block;
+    min-width: 50%;
+    max-width: 75%;
+  }
+
+  @media (min-width: $media-desktop) {
+    background-color: transparent;
+    padding: 3.75rem 0 7.5rem;
+    color: $clr-navy-blue;
+    display: block;
+    min-width: 50%;
+    max-width: 50%;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+}
+
+.image-container {
+  display: none;
+    text-align: right;
+
+  img {
+    object-fit: cover;
+  }
+
+  @media (min-width: $media-tablet) {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}

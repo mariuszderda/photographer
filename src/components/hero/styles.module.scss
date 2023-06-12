@@ -1,0 +1,44 @@
+
+.background_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.hero {
+  height: 100vh;
+}
+
+
+.title {
+  position: absolute;
+  left: 0;
+  grid-column-start: 1;
+  bottom: 7rem;
+  color: $clr-white;
+  font-family: $ff-serif-bold;
+  font-size: $fs-600;
+  line-height: $line-height-600;
+  letter-spacing: $letter-spacing-2;
+  max-width: 70%;
+  padding: 0.5rem 1.5rem;
+  z-index: 90;
+
+  @media (min-width: $media-tablet) {
+    font-size: $fs-700;
+    line-height: $line-height-800;
+    max-width: 60%;
+    padding-inline: clamp(0.5rem, 5vh + 1rem, 8.75rem);
+  }
+  @media (min-width: $media-desktop) {
+    padding-inline: clamp(8.75rem, 5vh + 1rem, 10rem);
+  }
+}
