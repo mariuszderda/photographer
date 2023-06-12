@@ -2,14 +2,24 @@
   margin: 1.5rem auto;
   display: flex;
   position: relative;
+  width: 100%;
 
   @media (min-width: $media-tablet) {
     margin: 6.875rem auto;
   }
+
+  &__title{
+    @media (min-width: $media-tablet) {
+      margin-top: 2.75rem;
+    }
+    @media (min-width: $media-desktop) {
+      margin-top: 4.875rem;
+    }
+  }
 }
 
 .article {
-    min-height: 932px;
+  min-height: 932px;
 
 }
 
@@ -30,8 +40,7 @@
     padding: 3.75rem 0 7.5rem;
     color: $clr-navy-blue;
     display: block;
-    min-width: 50%;
-    max-width: 50%;
+    max-width: 28.75rem;
   }
 
   span {
@@ -43,7 +52,7 @@
 
 .image-container {
   display: none;
-    text-align: right;
+  text-align: right;
 
   img {
     object-fit: cover;
@@ -52,10 +61,11 @@
   @media (min-width: $media-tablet) {
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
     width: 50%;
     position: absolute;
     right: 0;
-    bottom: 0;
+    //bottom: 0;
     z-index: -1;
   }
 }

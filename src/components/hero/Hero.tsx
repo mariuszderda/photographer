@@ -8,9 +8,11 @@ const Hero: FC = () => {
       <div className={styles.background_image}>
         <Image src="/images/monolit-moments_background.jpg" alt="Background image" fill />
       </div>
-      <h1 className={styles.title}>
-        <span className="sr-only">Monolit Moments - </span>It’s high time you told your story
-      </h1>
+      <div className={styles['hero-title__container']}>
+        <h1 className={styles['hero-title']}>
+          <span className="sr-only">Monolit Moments - </span>It’s high time you told your story
+        </h1>
+      </div>
     </section>
   )
 }

@@ -20,39 +20,44 @@ const Navbar = () => {
         scrollPosition > 200 && !isOpen ? styles['header-backgroud'] : ''
       }`}
     >
-      <div className={styles.logo_container}>
-        <Image src="/images/logo.svg" alt="logo" width={216} height={64} />
+      <div className={styles.header__container}>
+        <div className={styles.logo_container}>
+          <Image src="/images/logo.svg" alt="logo" width={216} height={64} />
+        </div>
+        <button
+          onClick={handleButtonClick}
+          className={styles.mobile_toggle_bar}
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span className="sr-only">Menu</span>
+          <IoCloseOutline className={`${styles.close} ${isOpen ? styles.active : ''}`} size={32} />
+          <HiBars3BottomRight
+            className={`${styles.bars} ${isOpen ? styles.active : ''}`}
+            size={32}
+          />
+        </button>
+        <nav className={`${styles.navigation}  ${isOpen ? styles.active : ''} `}>
+          <ul role="list" data-visible="false" className={`${styles.list}`}>
+            <li className={styles['list-item']}>
+              <Link href="/">O mnie</Link>
+            </li>
+            <li className={styles['list-item']}>
+              <Link href="/gallery">Galeria</Link>
+            </li>
+            <li className={styles['list-item']}>
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li className={styles['list-item']}>
+              <Link href="/shop">Sklep</Link>
+            </li>
+            <li className={styles['list-item']}>
+              <Link href="/contact">Kontakt</Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <button
-        onClick={handleButtonClick}
-        className={styles.mobile_toggle_bar}
-        type="button"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-      >
-        <span className="sr-only">Menu</span>
-        <IoCloseOutline className={`${styles.close} ${isOpen ? styles.active : ''}`} size={32} />
-        <HiBars3BottomRight className={`${styles.bars} ${isOpen ? styles.active : ''}`} size={32} />
-      </button>
-      <nav className={`${styles.navigation}  ${isOpen ? styles.active : ''} `}>
-        <ul role="list" data-visible="false" className={`${styles.list}`}>
-          <li className={styles['list-item']}>
-            <Link href="/">O mnie</Link>
-          </li>
-          <li className={styles['list-item']}>
-            <Link href="/gallery">Galeria</Link>
-          </li>
-          <li className={styles['list-item']}>
-            <Link href="/blog">Blog</Link>
-          </li>
-          <li className={styles['list-item']}>
-            <Link href="/shop">Sklep</Link>
-          </li>
-          <li className={styles['list-item']}>
-            <Link href="/contact">Kontakt</Link>
-          </li>
-        </ul>
-      </nav>
     </header>
   )
 }

@@ -8,7 +8,7 @@ const About: FC = () => {
   return (
     <section className={styles.about}>
       <article className={styles.article}>
-        <TitleHeader tag="h2" weight="bold" size="xLarge">
+        <TitleHeader tag="h2" weight="bold" size="xLarge" className={styles.about__title}>
           O mnie
         </TitleHeader>
         <Paragraph className={styles.paragraph}>
