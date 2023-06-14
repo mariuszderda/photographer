@@ -43,10 +43,14 @@
     max-width: 28.75rem;
   }
 
-  span {
+  p {
     display: block;
     margin-bottom: 16px;
     width: 100%;
+
+    @media (min-width: $media-tablet) and (max-width: $media-desktop){
+      color: $clr-white
+    }
   }
 }
 
