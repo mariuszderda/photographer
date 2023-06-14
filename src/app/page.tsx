@@ -1,20 +1,17 @@
-import Hero from '@/components/hero/Hero'
 import About from '@/components/about/About'
+import Hero from '@/components/hero/Hero'
 import { fetchGraphQL } from '@/utils/contentful'
 import { homePageQuery } from '@/utils/contentfulQuery'
 
 export const revalidate = 300
 
 const Home = async () => {
-  const {
-    data: {
-      homeCollection: { items },
-    },
-  } = await fetchGraphQL(homePageQuery)
+  const { data } = await fetchGraphQL(homePageQuery)
 
-  if (items.length < 1) throw new Error('Oops. Ćoś poszło nie tak')
+  if (data.homeCollection.items.lenght > 0) throw new Error('Oops. Ćoś poszło nie tak')
 
-  const { pageName, pageMotto, heroImage, aboutTitle, aboutParagraph, aboutImage } = items[0]
+  const { pageName, pageMotto, heroImage, aboutTitle, aboutParagraph, aboutImage } =
+    data.homeCollection.items[0]
 
   return (
     <main>

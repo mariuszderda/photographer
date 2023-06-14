@@ -17,6 +17,7 @@ const titleHeader = cva(styles.base, {
       xLarge: styles['x-large'],
     },
   },
+  compoundVariants: [{ weight: 'bold', size: 'xLarge', className: styles['page-header'] }],
   defaultVariants: {
     weight: 'bold',
     size: 'medium',

@@ -101,11 +101,17 @@ a {
   border: 0;
 }
 
+.nagivation-active {
+  overflow: hidden;
+}
+
 
 
 main {
   margin: 0 auto;
   padding-inline: 1.5rem;
+  width: 100%;
+  min-height: 100vh;
   max-width: 1440px;
 
   @media (min-width: $media-tablet) {

@@ -6,26 +6,33 @@ import { HiBars3BottomRight } from 'react-icons/hi2'
 import { useState } from 'react'
 import { IoCloseOutline } from 'react-icons/io5'
 import useScrollPosition from '@/hook/useScrollPosition'
+import { usePathname } from 'next/navigation'
 import styles from './styles.module.scss'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const pathname = usePathname()
 
-  const handleButtonClick = () => setIsOpen((prevState) => !prevState)
+  const handleNavigationToogle = () => {
+    document.body.classList.toggle('nagivation-active')
+    setIsOpen((prevState) => !prevState)
+  }
   const scrollPosition = useScrollPosition()
 
   return (
     <header
       className={`${styles.header} ${
-        scrollPosition > 200 && !isOpen ? styles['header-backgroud'] : ''
+        (scrollPosition > 200 || pathname !== '/') && !isOpen ? styles['header-backgroud'] : ''
       }`}
     >
       <div className={styles.header__container}>
         <div className={styles.logo_container}>
-          <Image src="/images/logo.svg" alt="logo" width={216} height={64} />
+          <Link href="/">
+            <Image src="/images/logo.svg" alt="logo" width={216} height={64} />
+          </Link>
         </div>
         <button
-          onClick={handleButtonClick}
+          onClick={handleNavigationToogle}
           className={styles.mobile_toggle_bar}
           type="button"
           aria-controls="primary-navigation"
@@ -41,19 +48,29 @@ const Navbar = () => {
         <nav className={`${styles.navigation}  ${isOpen ? styles.active : ''} `}>
           <ul role="list" data-visible="false" className={`${styles.list}`}>
             <li className={styles['list-item']}>
-              <Link href="/">O mnie</Link>
+              <Link onClick={handleNavigationToogle} href="/">
+                O mnie
+              </Link>
             </li>
             <li className={styles['list-item']}>
-              <Link href="/gallery">Galeria</Link>
+              <Link onClick={handleNavigationToogle} href="/gallery">
+                Galeria
+              </Link>
             </li>
             <li className={styles['list-item']}>
-              <Link href="/blog">Blog</Link>
+              <Link onClick={handleNavigationToogle} href="/blog">
+                Blog
+              </Link>
             </li>
             <li className={styles['list-item']}>
-              <Link href="/shop">Sklep</Link>
+              <Link onClick={handleNavigationToogle} href="/shop">
+                Sklep
+              </Link>
             </li>
             <li className={styles['list-item']}>
-              <Link href="/contact">Kontakt</Link>
+              <Link onClick={handleNavigationToogle} href="/contact">
+                Kontakt
+              </Link>
             </li>
           </ul>
         </nav>

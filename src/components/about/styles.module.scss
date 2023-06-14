@@ -24,11 +24,10 @@
 }
 
 .paragraph {
-  margin-top: 1.25rem;
 
   @media (min-width: $media-tablet) {
     background-color: $clr-navy-blue;
-    padding: 3.75rem 2rem 7.5rem;
+    padding: 1.25rem 2rem 7.5rem;
     color: $clr-white;
     display: block;
     min-width: 50%;
@@ -37,7 +36,7 @@
 
   @media (min-width: $media-desktop) {
     background-color: transparent;
-    padding: 3.75rem 0 7.5rem;
+    padding: 0 0 7.5rem;
     color: $clr-navy-blue;
     display: block;
     max-width: 28.75rem;
