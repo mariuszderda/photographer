@@ -1,7 +1,7 @@
-import '../styles/globals.scss'
-import { apfelRegular, clashDisplayBold, clashDisplayMedium } from '@/utils/font'
-import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
+import Navbar from '@/components/navbar/Navbar'
+import { apfelRegular, clashDisplayBold, clashDisplayMedium } from '@/utils/font'
+import '../styles/globals.scss'
 
 export const metadata = {
   title: 'Monolit Moments',

@@ -8,7 +8,7 @@ export const revalidate = 300
 const Home = async () => {
   const { data } = await fetchGraphQL(homePageQuery)
 
-  if (data.homeCollection.items.lenght > 0) throw new Error('Oops. Ćoś poszło nie tak')
+  if (data.homeCollection.items.lenght < 1) throw new Error('Oops. Ćoś poszło nie tak')
 
   const { pageName, pageMotto, heroImage, aboutTitle, aboutParagraph, aboutImage } =
     data.homeCollection.items[0]

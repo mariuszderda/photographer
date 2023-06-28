@@ -1,12 +1,12 @@
 'use client'
 
+import useScrollPosition from '@/hook/useScrollPosition'
 import Image from 'next/image'
 import Link from 'next/link'
-import { HiBars3BottomRight } from 'react-icons/hi2'
-import { useEffect, useState } from 'react'
-import { IoCloseOutline } from 'react-icons/io5'
-import useScrollPosition from '@/hook/useScrollPosition'
 import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { HiBars3BottomRight } from 'react-icons/hi2'
+import { IoCloseOutline } from 'react-icons/io5'
 import styles from './styles.module.scss'
 
 const Navbar = () => {
@@ -73,7 +73,7 @@ const Navbar = () => {
         <nav className={`${styles.navigation}  ${isOpen ? styles.active : ''} `}>
           <ul role="list" data-visible="false" className={`${styles.list}`}>
             <li className={styles['list-item']}>
-              <Link onClick={handleCloseNavigation} href="/">
+              <Link onClick={handleCloseNavigation} href="/#about" scroll={false}>
                 O mnie
               </Link>
             </li>
@@ -95,6 +95,11 @@ const Navbar = () => {
             <li className={styles['list-item']}>
               <Link onClick={handleCloseNavigation} href="/contact">
                 Kontakt
+              </Link>
+            </li>
+            <li className={styles['list-item']}>
+              <Link onClick={handleCloseNavigation} href="/contact">
+                Login
               </Link>
             </li>
           </ul>

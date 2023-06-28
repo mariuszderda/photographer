@@ -1,14 +1,24 @@
 'use client'
 
-import { FC } from 'react'
-import TitleHeader from '@/components/ui/tilteHeader/TitleHeader'
 import GalleryCard from '@/components/galleryCard/GalleryCard'
+import TitleHeader from '@/components/ui/tilteHeader/TitleHeader'
 import { Masonry } from 'react-plock'
+
 import styles from './styles.module.scss'
 
-const Gallery: FC = () => {
-  const imageArray: number[] = Array.from({ length: 27 }, (_, i) => i + 1)
+interface GalleryProps {
+  items: {
+    galleryTitle: string
+    slug: string
+    mainImage: {
+      image: {
+        url: string
+      }[]
+    }
+  }[]
+}
 
+const Gallery = ({ items }: GalleryProps) => {
   return (
     <section className={styles.gallery}>
       <TitleHeader tag="h1" size="xLarge">
@@ -16,13 +26,20 @@ const Gallery: FC = () => {
       </TitleHeader>
       <div className={styles['image-container']}>
         <Masonry
-          items={imageArray}
+          items={items}
           config={{
             columns: [1, 2, 3],
             gap: [12, 12, 24],
             media: [640, 768, 1024],
           }}
-          render={(item) => <GalleryCard key={item} imageSrc={item} />}
+          render={(item) => (
+            <GalleryCard
+              slug={item.slug}
+              key={item.slug}
+              title={item.galleryTitle}
+              imageSrc={item.mainImage.image[0].url}
+            />
+          )}
         />
       </div>
     </section>

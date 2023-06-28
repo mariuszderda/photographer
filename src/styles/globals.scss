@@ -33,6 +33,11 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -106,13 +111,12 @@ a {
 }
 
 
-
 main {
   margin: 0 auto;
   padding-top: 5rem;
   padding-inline: 1.5rem;
   width: 100%;
-  min-height: 100vh;
+  //min-height: 100vh;
   max-width: 1440px;
 
   @media (min-width: $media-tablet) {

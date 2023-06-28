@@ -25,11 +25,10 @@
 
   &.header-background {
     background: rgb(1,22,39);
-    background: linear-gradient(180deg, rgba(1,22,39,0.9500175070028011) 0%, rgba(65,80,93,0.4) 69%);
-    @supports (backdrop-filter: blur(1.5rem)) {
-      backdrop-filter: blur(1.5rem);
-      background: rgb(1,22,39);
-      background: linear-gradient(180deg, rgba(1,22,39,0.8) 0%, rgba(1,22,39,0.6) 60%, rgba(65,80,93,0.4) 100%);
+    background: linear-gradient(180deg, rgba(1, 22, 39, 0.70) 0%, rgba(1, 22, 39, 0.50) 100%);
+    @supports (backdrop-filter: blur(1.25rem)) {
+      backdrop-filter: blur(1.25rem);
+      background: linear-gradient(180deg, rgba(1, 22, 39, 0.70) 0%, rgba(1, 22, 39, 0.50) 100%);
     }
   }
 }

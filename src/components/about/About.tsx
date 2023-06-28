@@ -24,14 +24,14 @@ const About: FC<AboutProps> = ({ aboutTitle, aboutImage, aboutParagraph }) => {
   const paragraphs = aboutParagraph.json.content[0].content[0].value.split(/\r?\n\n/)
 
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <article className={styles.article}>
         <TitleHeader tag="h2" weight="bold" size="xLarge" className={styles.about__title}>
           {aboutTitle}
         </TitleHeader>
         <div className={styles.paragraph}>
           {paragraphs.map((paragraph: string) => (
-            <Paragraph>{paragraph}</Paragraph>
+            <Paragraph key={paragraph}>{paragraph}</Paragraph>
           ))}
         </div>
       </article>

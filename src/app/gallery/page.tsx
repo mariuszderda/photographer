@@ -1,10 +1,15 @@
-import { FC } from 'react'
 import Gallery from '@/components/gallery/Gallery'
+import { fetchGraphQL } from '@/utils/contentful'
+import { galleryCollectionQuery } from '@/utils/contentfulQuery'
 
-const Page: FC = () => {
+const Page = async () => {
+  /* get data from contentful */
+  const { data } = await fetchGraphQL(galleryCollectionQuery)
+  const { items } = data.galleryCollection
+
   return (
     <main>
-      <Gallery />
+      <Gallery items={items} />
     </main>
   )
 }
