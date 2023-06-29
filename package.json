@@ -23,6 +23,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-spring-lightbox": "^1.7.1",
     "styled-components": "^5.3.11",
+    "swiper": "^9.4.1",
     "typescript": "5.0.4",
     "yarn": "^1.22.19"
   },

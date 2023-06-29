@@ -35,10 +35,14 @@ export const galleryItem = `
           galleryTitle
           mainImage {
             image
+            title
+            slug
           }
           galleryImagesCollection {
             items {
-              image 
+              image
+              title
+              slug
             }
           }
         }
