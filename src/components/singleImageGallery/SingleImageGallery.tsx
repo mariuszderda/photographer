@@ -3,7 +3,7 @@
 import GalleryModal from '@/components/galleryModal/GalleryModal'
 import TitleHeader from '@/components/ui/tilteHeader/TitleHeader'
 import Image from 'next/image'
-import { FC, useMemo, useState } from 'react'
+import React, { FC, useMemo, useState } from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import styles from './styles.module.scss'
 
@@ -44,7 +44,7 @@ const SingleImageGallery: FC<SingleImageGalleryProps> = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [currentImage, setCurrentImage] = useState<string | undefined>('')
-  const handleModalOpen = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleModalOpen = ({ e }: { e: React.MouseEvent<HTMLDivElement, MouseEvent> }) => {
     setCurrentImage(e.currentTarget.dataset?.slug)
     setIsModalOpen((prevState) => !prevState)
   }
@@ -79,7 +79,7 @@ const SingleImageGallery: FC<SingleImageGalleryProps> = ({
           {galleryImages.map((img, idx) => (
             <div
               role="presentation"
-              onClick={(e) => handleModalOpen(e)}
+              onClick={(e) => handleModalOpen({ e })}
               key={img.slug}
               data-slug={img.slug}
               className={`${styles['gallery-image']} ${idx > 0 ? styles.firstImage : ''}`}

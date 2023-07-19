@@ -31,6 +31,7 @@ const Navbar = () => {
     }
   }
 
+  // switch blur background when menu bar is open
   useEffect(() => {
     if (isOpen) {
       setHeaderBackground(false)

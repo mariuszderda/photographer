@@ -1,5 +1,6 @@
 import TitleHeader from '@/components/ui/tilteHeader/TitleHeader'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { FC, useState } from 'react'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import styles from './styles.module.scss'
@@ -34,7 +35,7 @@ const GalleryModal: FC<GalleryModalProps> = ({ handleOpen, currentImage, images 
     }
     return setFirstImage(images[currentIndex + 1].slug)
   }
-  const handlePreviosArrowClick = (e: React.MouseEvent) => {
+  const handlePreviousArrowClick = (e: React.MouseEvent) => {
     e.stopPropagation()
     const currentIndex = images.findIndex((item) => item.slug === mainImage?.slug)
     if (currentIndex - 1 < 0) {
@@ -54,12 +55,11 @@ const GalleryModal: FC<GalleryModalProps> = ({ handleOpen, currentImage, images 
       <TitleHeader tag="h4" size="xSmall" weight="normal">
         {mainImage.title}
       </TitleHeader>
-      <br />
       <div className={styles['main-image']}>
         <IoIosArrowBack
           size={48}
           className={styles['arrow-left']}
-          onClick={(e) => handlePreviosArrowClick(e)}
+          onClick={(e) => handlePreviousArrowClick(e)}
         />
         <Image
           src={mainImage.url}
@@ -67,6 +67,9 @@ const GalleryModal: FC<GalleryModalProps> = ({ handleOpen, currentImage, images 
           width={mainImage.width}
           height={mainImage.height}
         />
+        <Link href={`/shop/${mainImage.slug}`} className={styles.link}>
+          Go to store
+        </Link>
         <IoIosArrowForward
           size={48}
           className={styles['arrow-right']}

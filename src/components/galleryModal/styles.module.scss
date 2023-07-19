@@ -41,6 +41,7 @@
   align-items: center;
   flex-basis: fit-content;
   height: 80vh;
+  margin-top: 16px;
   //width: 100%;
   //background-color: lightpink;
 
@@ -75,4 +76,24 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.link {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  //border: 1px solid $clr-navy-blue-70;
+  padding-inline: 2rem;
+  padding-block: 0.5rem;
+  outline: 2px solid $clr-white;
+  outline-offset: 2px;
+  //background-color: $clr-navy-blue-50;
+  background: rgba(1, 22, 39, 0.70);
+  transform: translateX(-50%);
+  transition: transform 0.1s ease-in-out;
+  will-change: transform;
+
+  &:hover {
+    transform: translateX(-50%) scale(1.1);
+  }
 }
