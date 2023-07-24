@@ -1,5 +1,5 @@
-import React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
+import React from 'react'
 
 import styles from './styles.module.scss'
 
@@ -11,6 +11,7 @@ const titleHeader = cva(styles.base, {
     },
     size: {
       xSmall: styles['x-small'],
+      xxSmall: styles['xx-small'],
       small: styles.small,
       medium: styles.medium,
       large: styles.large,

@@ -23,13 +23,7 @@ const GalleryCard: FC<GalleryCardProps> = ({ imageSrc, slug, title }) => {
           See more <BsArrowUpRight />
         </Paragraph>
       </div>
-      <Image
-        src={imageSrc}
-        alt={`image ${imageSrc}`}
-        width={500}
-        height={1000}
-        // loading="lazy"
-      />
+      <Image src={imageSrc} alt={`${title} - main image gallery`} width={500} height={1000} />
     </Link>
   )
 }

@@ -14,7 +14,7 @@ interface SingleImageGalleryProps {
       title: string
       slug: string
       image: {
-        url: string
+        secure_url: string
         public_id: string
         width: number
         height: number
@@ -25,7 +25,7 @@ interface SingleImageGalleryProps {
         title: string
         slug: string
         image: {
-          url: string
+          secure_url: string
           public_id: string
           width: number
           height: number
@@ -51,7 +51,7 @@ const SingleImageGallery: FC<SingleImageGalleryProps> = ({
 
   const galleryImages = useMemo(() => {
     const firstImage = {
-      url: mainImage.image[0].url,
+      url: mainImage.image[0].secure_url,
       title: mainImage.title,
       slug: mainImage.slug,
       width: mainImage.image[0].width,
@@ -59,7 +59,7 @@ const SingleImageGallery: FC<SingleImageGalleryProps> = ({
     }
     const restImages = items.map((item) => {
       return {
-        url: item.image[0].url,
+        url: item.image[0].secure_url,
         title: item.title,
         slug: item.slug,
         width: item.image[0].width,

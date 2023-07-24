@@ -49,3 +49,21 @@ export const galleryItem = `
       }
     }
   `
+
+export const blogCollectionQuery = `
+  query {
+    blogCollection {
+      items {
+        sys {
+          firstPublishedAt
+        }
+        title
+        description
+        slug
+        mainImage {
+          image
+        }
+      }
+    }
+  }
+`

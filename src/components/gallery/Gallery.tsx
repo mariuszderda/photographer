@@ -12,7 +12,7 @@ interface GalleryProps {
     slug: string
     mainImage: {
       image: {
-        url: string
+        secure_url: string
       }[]
     }
   }[]
@@ -37,7 +37,7 @@ const Gallery = ({ items }: GalleryProps) => {
               slug={item.slug}
               key={item.slug}
               title={item.galleryTitle}
-              imageSrc={item.mainImage.image[0].url}
+              imageSrc={item.mainImage.image[0].secure_url}
             />
           )}
         />

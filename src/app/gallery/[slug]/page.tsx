@@ -10,8 +10,10 @@ interface PageProps {
 
 const Page = async ({ params: { slug } }: PageProps) => {
   const querySlug = { slug }
-  const { data } = await fetchGraphQL(galleryItem, querySlug)
-  const gallery = data.galleryCollection.items[0]
+  const {
+    data: { galleryCollection },
+  } = await fetchGraphQL(galleryItem, querySlug)
+  const gallery = galleryCollection.items[0]
 
   return (
     <main>
