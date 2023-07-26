@@ -67,3 +67,48 @@ export const blogCollectionQuery = `
     }
   }
 `
+
+export const blogArticleQuery = `
+  query getArticleBySlug ($slug: String!)  {
+    blogCollection (limit: 10, where: {slug: $slug}) {
+      items {
+        title,
+        description,
+        mainImage {
+          title,
+          image,
+          slug
+        }
+        blogArticle {
+          json
+          links {            
+            entries {
+              block {
+                sys{
+                  id
+                }
+                __typename
+                ... on Images {
+                  title
+                  slug
+                  image
+                }
+              }
+              inline {
+                sys{
+                  id
+                }
+                __typename
+                ... on Images {
+                  title
+                  slug
+                  image
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

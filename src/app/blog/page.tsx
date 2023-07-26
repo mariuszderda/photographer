@@ -1,5 +1,5 @@
 import BlogPostCard from '@/components/blogPostCard/BlogPostCard'
-import CardContainer from '@/components/cardContainer/CardContainer'
+import CardContainer from '@/components/ui/cardContainer/CardContainer'
 import TitleHeader from '@/components/ui/tilteHeader/TitleHeader'
 import { fetchGraphQL } from '@/utils/contentful'
 import { blogCollectionQuery } from '@/utils/contentfulQuery'

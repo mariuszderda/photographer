@@ -1,0 +1,56 @@
+.title {
+  padding-block: 1rem;
+}
+
+.description {
+  padding-bottom: 1rem;
+}
+
+.image-container {
+  position: relative;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
+
+.post {
+  p {
+    padding-block: 1rem;
+  }
+  div {
+    display: inline-flex;
+    width: 100%;
+    height: 450px;
+    padding-right: 8px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media (min-width: $media-tablet) {
+      width: calc(50% - 8px);
+    }
+
+    img {
+      object-fit: cover;
+      object-position: bottom;
+      width: 100%;
+      height: 100%;
+      transition: filter .1s ease-in;
+      will-change: filter;
+      cursor: pointer;
+    }
+
+    &:hover img {
+      filter: brightness(75%);
+    }
+
+  }
+
+
+}
